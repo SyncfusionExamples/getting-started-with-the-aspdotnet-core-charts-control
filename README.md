@@ -1,6 +1,6 @@
 # Getting Started with the ASP.NET Core Charts Control
 
-A quick start project that shows how to add Charts component to a ASP.NET Core project using .NET 8.0 framework. This project also includes a code snippet to populate data and set series types in charts and add legends, data labels, and tooltips.
+A quick-start project shows how to add the Charts component to an ASP.NET Core project using the .NET 8.0 framework. This project includes a code snippet to populate data, set series types in charts, and add legends, data labels, and tooltips.
 
 Refer to the getting started documentation for the Syncfusion ASP.NET Core Charts component: 
 https://ej2.syncfusion.com/aspnetcore/documentation/chart/getting-started
