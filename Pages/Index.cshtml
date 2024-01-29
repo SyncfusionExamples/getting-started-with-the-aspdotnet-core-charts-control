@@ -1,0 +1,44 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    List<LayoutData> SalesData = new List<LayoutData>()
+    {
+       new LayoutData{ Period = "Jan", OnlinePercentage = 3600, RetailPercentage = 6400 },
+       new LayoutData{ Period = "Feb", OnlinePercentage = 6200, RetailPercentage = 5300 },
+       new LayoutData{ Period = "Mar", OnlinePercentage = 8100, RetailPercentage = 4900 },
+       new LayoutData{ Period = "Apr", OnlinePercentage = 5900, RetailPercentage = 5300 },
+       new LayoutData{ Period = "May", OnlinePercentage = 8900, RetailPercentage = 4200 },
+       new LayoutData{ Period = "Jun", OnlinePercentage = 7200, RetailPercentage = 6500 },
+       new LayoutData{ Period = "Jul", OnlinePercentage = 4300, RetailPercentage = 7900 },
+       new LayoutData{ Period = "Aug", OnlinePercentage = 4600, RetailPercentage = 3800 },
+       new LayoutData{ Period = "Sep", OnlinePercentage = 5500, RetailPercentage = 6800 },
+       new LayoutData{ Period = "Oct", OnlinePercentage = 6350, RetailPercentage = 3400 },
+       new LayoutData{ Period = "Nov", OnlinePercentage = 5700, RetailPercentage = 6400 },
+       new LayoutData{ Period = "Dec", OnlinePercentage = 8000, RetailPercentage = 6800 }
+    };
+}
+
+<ejs-chart id="chart" title="Sales Data">
+    <e-chart-primaryxaxis valueType=Category
+                          title="Period"></e-chart-primaryxaxis>
+    <e-chart-primaryyaxis title="Sales Percentage"></e-chart-primaryyaxis>
+    <e-chart-legendsettings visible=true></e-chart-legendsettings>
+    <e-chart-tooltipsettings enable=true></e-chart-tooltipsettings>
+    <e-series-collection>
+        <e-series type="Line"
+                  name="Online"
+                  dataSource="SalesData"
+                  xName="Period"
+                  yName="OnlinePercentage">
+                  <e-series-marker visible=true>
+                      <e-series-datalabel visible=true></e-series-datalabel>
+                  </e-series-marker>
+        </e-series>
+        <e-series type="Line"
+                  name="Retail"
+                  dataSource="SalesData"
+                  xName="Period"
+                  yName="RetailPercentage"></e-series>
+    </e-series-collection>
+</ejs-chart>
